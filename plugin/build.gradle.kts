@@ -11,7 +11,7 @@ dependencies {
 }
 
 group = "io.github.eeqk"
-version = "0.0.0"
+version = "1.0.0"
 
 // for `:example` module
 publishing {
