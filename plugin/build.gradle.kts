@@ -22,7 +22,7 @@ publishing {
         }
         maven {
             name = "GitHubPackages"
-            setUrl("https://maven.pkg.github.com/eEQK/cynorkis")
+            setUrl("https://maven.pkg.github.com/eEQK/gudd")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
