@@ -13,9 +13,9 @@ dependencies {
 group = "io.github.eeqk"
 version = "1.0.0"
 
-// for `:example` module
 publishing {
     repositories {
+        // for `:example` module
         maven {
             name = "localPluginRepository"
             url = uri("../local-plugin-repository")
@@ -33,10 +33,21 @@ publishing {
 
 gradlePlugin {
     plugins {
-        create("simplePlugin") {
+        create("gudd") {
             id = "io.github.eeqk.gudd"
             implementationClass = "gudd.GithubDependencyDownloaderPlugin"
         }
     }
 }
 
+pluginBundle {
+    website = "https://github.com/eEQK/gudd"
+    vcsUrl = "https://github.com/eEQK/gudd"
+    tags = listOf("github", "dependency")
+    description = "GitHub dependency downloader"
+    (plugins) {
+        "gudd" {
+            displayName = "GitHub dependency downloader"
+        }
+    }
+}
