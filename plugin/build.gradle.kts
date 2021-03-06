@@ -15,11 +15,6 @@ version = "1.0.0"
 
 publishing {
     repositories {
-        // for `:example` module
-        maven {
-            name = "localPluginRepository"
-            url = uri("../local-plugin-repository")
-        }
         maven {
             name = "GitHubPackages"
             setUrl("https://maven.pkg.github.com/eEQK/gudd")

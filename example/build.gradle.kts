@@ -1,6 +1,6 @@
 plugins {
     `kotlin-jvm`
-    id("io.github.eeqk.gudd")
+    id("io.github.eeqk.gudd") version "1.0.0"
 }
 
 repositories {

@@ -15,34 +15,13 @@ gudd {
 }
 ```
 
-### Gradle setup
+### Example usage
 
-_There's an ongoing effort to publish this plugin into gradle plugin repository, so things will be a whole lot easier in the future._
-
-For a working example that you can actually run, see `example` directory.
-
-* `buildSrc/build.gradle.kts`
-```kotlin
-repositories {
-    maven {
-        url = uri("https://maven.pkg.github.com/eEQK/gudd")
-        credentials {
-            username = System.getenv("GITHUB_USER")
-            password = System.getenv("GITHUB_TOKEN") // with read:packages permission
-        }
-    }
-
-}
-
-dependencies {
-    implementation("io.github.eeqk.gudd:io.github.eeqk.gudd.gradle.plugin:1.0.0")
-}
-```
-
-* `module/build.gradle.kts` (apart from standard jvm configuration)
+* `build.gradle.kts`
 ```kotlin
 plugins {
-    id("io.github.eeqk.gudd")
+    kotlin("jvm")
+    id("io.github.eeqk.gudd") version "1.0.0"
 }
 
 repositories {
